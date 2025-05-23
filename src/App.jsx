@@ -10,13 +10,13 @@ function App() {
   const breeds = [
     {
       name: 'Golden Retriever 🐾',
-      img: './public/golden.png',
+      img: '/golden.png',
       reason:
         'Fluffy serotonin factory. Great with people, low drama, pro cuddler.',
     },
     {
       name: 'Poodle 🧠',
-      img: './public/poodle.png',
+      img: '/poodle.png',
       reason:
         'Comes in 3 sizes. Smarter than your ex. Will run your household with grace.',
     },
