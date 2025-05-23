@@ -86,11 +86,7 @@ function App() {
       {isLoading ? (
         <div className="loading">
           <h2>Analyzing your answers...</h2>
-          <img
-            src="/loading-dog.gif"
-            alt="Loading dogs"
-            className="loading-gif"
-          />
+          <img src="/IMG_4032.GIF" alt="Loading dogs" className="loading-gif" />
         </div>
       ) : showResult && selectedBreed ? (
         <div className="result">
