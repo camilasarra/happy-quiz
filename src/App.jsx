@@ -90,6 +90,7 @@ function App() {
         </div>
       ) : showResult && selectedBreed ? (
         <div className="result">
+          
           <h1>Science has spoken.</h1>
           <p>You clearly need a dog. Like, now.</p>
           <img
@@ -106,7 +107,8 @@ function App() {
         </div>
       ) : (
         <div className="question">
-          <h1>What would really make you happy?</h1>
+           <img src="/happy-dog.png" alt="Happy dog" className="intro-img" />
+          <h1>WHAT WOULD REALLY MAKE YOU HAPPY?</h1>
           <h2>Take this scientific quiz:</h2>
           <h2>{questions[current].question}</h2>
           <ul>
