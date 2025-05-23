@@ -1,34 +1,52 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import questions from './questions.js'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [current, setCurrent] = useState(0)
+  const [showResult, setShowResult] = useState(false)
+
+  const handleAnswer = () => {
+    if (current + 1 < questions.length) {
+      setCurrent(current + 1)
+    } else {
+      setShowResult(true)
+    }
+  }
+
+  const restartQuiz = () => {
+    setCurrent(0)
+    setShowResult(false)
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="quiz-container">
+      {showResult ? (
+        <div className="result">
+          <h2>Science has spoken.</h2>
+          <p>You clearly need a dog. Like, now.</p>
+          <img src="/dog.jpg" alt="A happy dog" className="dog-img" />
+          <h3>Suggested breed: Golden Retriever 🐾</h3>
+          <p>
+            Why? Because they are fluffy serotonin factories. Great with people,
+            low drama, pro cuddler.
+          </p>
+          <button onClick={restartQuiz}>Take it again</button>
+        </div>
+      ) : (
+        <div className="question">
+          <h1>What would really make you happy? Take this scientific quiz:</h1>
+          <h2>{questions[current].question}</h2>
+          <ul>
+            {questions[current].options.map((option, idx) => (
+              <li key={idx}>
+                <button onClick={handleAnswer}>{option}</button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   )
 }
 
