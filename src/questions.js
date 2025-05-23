@@ -4,7 +4,7 @@ const questions = [
       options: [
         "Homemade meal and a hug",
         "Someone who thinks I'm perfect no matter what",
-        "Floppy ears and a tail wag",
+        "Reading a book in a cozy corner",
       ],
     },
     {
@@ -21,6 +21,14 @@ const questions = [
         "Unconditional love",
         "More outdoor time",
         "Excited greetings every single time I enter a room",
+      ],
+    },
+    {
+      question: "ideal vacation?",
+      options: [
+        "A cabin in the woods",
+        "A beach resort with mojitos",
+        "A big city, museums, and no plans",
       ],
     },
   ]
