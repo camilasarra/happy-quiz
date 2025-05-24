@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
+
+
+
 body {
   margin: 0;
   padding : 0;
@@ -25,12 +30,13 @@ button {
 }
 button:hover {
   transform: scale(1.05);
-  background-color: lab(52.07% 8.32 -38.47);
+  background-color: rgb(102, 121, 185);
 }
 
-button:active {
-  transform: scale(0.95);
-  background-color: lab(52.07% 8.32 -38.47);
+.question-text {
+color: rgb(102, 121, 185);
+font-weight: 900;
+font-display: uppercase;
 }
 
 h1 {
@@ -43,6 +49,8 @@ h2 {
   font-size: 1.4rem;
   margin-bottom: 10px;
 }
+
+
 
 .quiz-container {
   max-width: 600px;
@@ -108,3 +116,41 @@ li {
     transform: scale(1) translateY(0);
   }
 }
+
+body.dark {
+  background-color: #222;
+  color: #fafafa;
+}
+
+body.dark h1 {
+  color: white;
+}
+
+body.dark h2 {
+  color: white;
+}
+
+
+.dark button {
+  background-color: #555;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.intro-img {
+  width: 100px;
+  animation: spin 5s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
+}
+
