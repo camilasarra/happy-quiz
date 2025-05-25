@@ -8,11 +8,9 @@ body {
   padding : 0;
   font-family: "Sono", monospace;
     font-optical-sizing: auto;
+   font-style: normal;
+    font-size: 16px;
   
-    font-style: normal;
-    
-  font-size: 16px;
-  background-color: #fafafa;
   color: #222;
   cursor: url('/IMG_4034 (1).png') 16 16, auto;
 }
@@ -64,6 +62,7 @@ h2 {
   margin: 20px 0;
   border-radius: 12px;
 }
+
 .loading-gif {
   width: 500px;
   margin: 20px auto;
@@ -94,12 +93,13 @@ li {
   opacity: 1;
   margin-top: 20px;
   font-size: 1.6rem;
-  color: #444;
+  color: #252525;
   animation-fill-mode: backwards;
+  font-weight: 700;
 }
 
 .intro-img {
-  width: 200px;
+  width: 300px;
   animation: bounceIn 1.2s ease-out;
   margin-bottom: 20px;
 }
@@ -149,7 +149,7 @@ body.dark .fun-fact {
 }
 
 .intro-img {
-  width: 100px;
+  width: 200px;
   animation: spin 5s linear infinite;
   margin-bottom: 20px;
 }
@@ -192,5 +192,17 @@ body.dark .fun-fact {
 
   .fun-fact {
     font-size: 1.2rem;
+    font-weight: 400;
   }
+}
+
+.result {
+  font-size: 1.5rem;
+  margin-top: 20px;
+background-image: url('/backdogs.PNG');
+  height: 100vh;
+  background-size: 200px;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat:space;
 }
