@@ -127,14 +127,15 @@ function App() {
           <img src="/happy-dog.png" alt="Happy dog" className="intro-img" />
           <h1>{t.introTitle}</h1>
           <h2>{t.introSubtitle}</h2>
-         <h2 className="question-text">{questions[current].question}</h2>
-          <ul>
-            {questions[current].options.map((option, idx) => (
-              <li key={idx}>
-                <button onClick={handleAnswer}>{option}</button>
-              </li>
-            ))}
-          </ul>
+         <h2 className="question-text">{questions[current].question[lang]}</h2>
+<ul>
+  {questions[current].options[lang].map((option, idx) => (
+    <li key={idx}>
+      <button onClick={handleAnswer}>{option}</button>
+    </li>
+  ))}
+</ul>
+
         </div>
       )}
     </div>

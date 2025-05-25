@@ -67,6 +67,7 @@ h2 {
 .loading-gif {
   width: 500px;
   margin: 20px auto;
+  max-width: 300px;
 }
 
 ul {
@@ -135,6 +136,11 @@ body.dark h2 {
   background-color: #555;
 }
 
+body.dark .fun-fact {
+  color: #ddd;
+}
+
+
 .top-controls {
   display: flex;
   justify-content: flex-end;
@@ -154,3 +160,37 @@ body.dark h2 {
   100% { transform: rotate(-10deg); }
 }
 
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .question-text {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .intro-img {
+    width: 80px;
+  }
+
+  .dog-img {
+    width: 200px;
+  }
+
+  .loading-gif {
+    width: 100%;
+  }
+
+  .fun-fact {
+    font-size: 1.2rem;
+  }
+}
