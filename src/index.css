@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
 
 
-
-
 body {
   margin: 0;
   padding : 0;
+  height: 100%;
   font-family: "Sono", monospace;
     font-optical-sizing: auto;
    font-style: normal;
     font-size: 16px;
-  
-  color: #222;
+   color: #222;
   cursor: url('/IMG_4034 (1).png') 16 16, auto;
+    background-image: url('/backdogs.PNG');
+  background-size: 200px ;
+  background-repeat: repeat;
 }
 
 button {
@@ -28,11 +29,11 @@ button {
 }
 button:hover {
   transform: scale(1.05);
-  background-color: rgb(102, 121, 185);
+  
 }
 
 .question-text {
-color: rgb(102, 121, 185);
+color: rgb(201, 133, 91);
 font-weight: 900;
 font-display: uppercase;
 }
@@ -49,12 +50,19 @@ h2 {
 }
 
 
-
 .quiz-container {
   max-width: 600px;
   margin: 40px auto;
   text-align: center;
   padding: 10px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
 }
 
 .dog-img {
@@ -95,7 +103,6 @@ li {
   font-size: 1.6rem;
   color: #252525;
   animation-fill-mode: backwards;
-  font-weight: 700;
 }
 
 .intro-img {
@@ -120,7 +127,7 @@ li {
 
 body.dark {
   background-color: #222;
-  color: #fafafa;
+  color: #807d7d;
 }
 
 body.dark h1 {
@@ -139,6 +146,21 @@ body.dark h2 {
 body.dark .fun-fact {
   color: #ddd;
 }
+
+body.dark .quiz-container {
+  background-color: #1c1b1b;
+  color: #e0dede;
+}
+
+body.dark .result-card {
+  background-color: #1f1f1f;
+  color: #e0dede;
+}
+
+body.dark .question-text {
+  color: rgb(201, 133, 91);
+}
+
 
 
 .top-controls {
@@ -194,15 +216,37 @@ body.dark .fun-fact {
     font-size: 1.2rem;
     font-weight: 400;
   }
+
+   button:hover {
+    transform: none;
+    background-color: #222; 
+  }
+    .result {
+    padding: 40px 10px;
+  }
+
+  .result-card {
+    max-width: 100%;
+    padding: 16px;
+  }
 }
 
 .result {
-  font-size: 1.5rem;
-  margin-top: 20px;
-background-image: url('/backdogs.PNG');
-  height: 100vh;
-  background-size: 200px;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat:space;
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:flex-start
+}
+
+.result-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
 }

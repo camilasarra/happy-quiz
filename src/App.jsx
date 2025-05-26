@@ -112,6 +112,7 @@ function App() {
         </div>
       ) : showResult && selectedBreed ? (
         <div className="result">
+            <div className="result-card">
           <h1>{t.resultTitle}</h1>
           <p>{t.resultSubtitle}</p>
           <img src={selectedBreed.img} alt={selectedBreed.name} className="dog-img" />
@@ -121,6 +122,7 @@ function App() {
             <strong>{t.fact}:</strong> {scientificFact}
           </p>
           <button onClick={restartQuiz}>{t.restart}</button>
+          </div>
         </div>
       ) : (
         <div className="question">
