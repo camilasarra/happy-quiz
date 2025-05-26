@@ -222,12 +222,18 @@ body.dark .question-text {
     background-color: #222; 
   }
     .result {
-    padding: 40px 10px;
+    padding: 20px 10px;
+    align-items: flex-start;
   }
 
   .result-card {
-    max-width: 100%;
+      max-width: 100%;
+    width: 100%;
     padding: 16px;
+    margin: 20px 0;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
   }
 }
 
